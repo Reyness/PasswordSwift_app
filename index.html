@@ -1,69 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- SEO = Básico -->
-    <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
 
-    <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
-    <meta property="og:title" content="Título de tu página" />
-    <meta property="og:description" content="Descripción de tu página" />
-    <meta
-      property="og:image"
-      content="URL de la imagen que quieres mostrar en las redes sociales"
-    />
-    <meta property="og:url" content="URL de tu página" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Título de tu página" />
-    <meta name="twitter:description" content="Descripción de tu página" />
-    <meta
-      name="twitter:image"
-      content="URL de la imagen que quieres mostrar en Twitter"
-    />
+<head>
+  <!-- Configuración del documento -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
-    <link rel="manifest" href="site.webmanifest" />
-    <!-- icono de acceso para IOS -->
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+  <!-- Configuración básica de SEO -->
+  <title>Generador de Contraseñas Aleatorias</title>
+  <meta name="description" content="Cree contraseñas seguras para proteger sus cuentas de Internet" />
+  <meta name="keywords" content="" />
 
-    <!-- links de estilos -->
-    <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Se cambia el tema de algunos navegadores -->
-    <meta name="theme-color" content="#fafafa" />
-    <!-- Código de las plataformas de Análisis -->
-    <script></script>
-    <!-- Scripts a cargar antes de la renderización -->
-    <script src="preloader.js"></script>
-  </head>
-  <body>
-    <div id="container">
-      <!-- *** ESTRUCTURA SEMÁNTICA *** -->
-      <!-- Header (encabezado de la página, zona superior) -->
-      <header>
-        <!-- nav (el navegador de toda la web) -->
-        <nav>
-          <a href="" class="link1">link1</a>
-          <a href="" class="link2">link2</a>
-          <a href="" class="link3">link3</a>
-          <a href="" class="link4">link4</a>
-        </nav>
-      </header>
-      <!-- Main (centro de la página, zona central) -->
-      <main>
-        <!-- section y article (posibilidades dentro de main) -->
-      </main>
-      <!-- Footer (final de la página, zona inferior) -->
-      <footer>
-        <h6>&copy;Copyright</h6>
-      </footer>
-    </div>
+  <!-- Etiquetas Open Graph y Twitter Card para SEO en Redes Sociales -->
+  <meta property="og:title" content="Generador de Contraseñas Aleatorias" />
+  <meta property="og:description" content="Cree contraseñas seguras para proteger sus cuentas de Internet" />
+  <meta property="og:image" content="URL de la imagen para redes sociales" />
+  <meta property="og:url" content="URL de tu página" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Generador de Contraseñas Aleatorias" />
+  <meta name="twitter:description" content="Cree contraseñas seguras para proteger sus cuentas de Internet" />
+  <meta name="twitter:image" content="URL de la imagen para Twitter" />
 
-  </body>
+  <!-- Configuración de la aplicación web y accesos directos -->
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
+
+  <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Enlace a las fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Cambio del tema del navegador -->
+  <meta name="theme-color" content="#fafafa" />
+
+  <!-- Código de las plataformas de análisis -->
+  <script></script>
+
+  <!-- Scripts a cargar antes de la renderización -->
+  <script src="preloader.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <!-- Encabezado con enlaces para iniciar sesión y registrarse -->
+    <header>
+      <nav class="btn-login">
+        <a href="#" class="sign-up">Sign Up</a>
+        <a href="#" class="log-in">Log In</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Título de la página y subtítulo -->
+      <div class="title-web">
+        <h1 class="big-title">Generador de <span>Contraseñas</span> Aleatorias</h1>
+        <h4 class="small-title">Cree contraseñas seguras para proteger sus cuentas de <span>Internet</span></h4>
+
+        <!-- Entradas para generar contraseñas -->
+        <div class="password-generator">
+          <input class="numbers" type="number">
+          <input class="pass-generate" type="text">
+          <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+        </div>
+
+        <!-- Validación de caracteres permitidos -->
+        <div class="validate-characters">
+          <h4 class="text-characters">Caracteres usados:</h4>
+          <input type="checkbox"><label for="">A-Z</label>
+          <input type="checkbox"><label for="">a-z</label>
+          <input type="checkbox"><label for="">0-9</label>
+          <input type="checkbox"><label for="">!@#$%&</label>
+        </div>
+      </div>
+
+      <p class="content-web">Esta herramienta utiliza Javascript para generar contraseñas de forma segura directamente
+        en tu navegador sin necesidad de enviar información sensible a través de la red. Al ejecutarse localmente en tu
+        dispositivo, garantiza una capa adicional de privacidad y seguridad. La generación de contraseñas se realiza
+        mediante algoritmos robustos, lo que garantiza la creación de claves fuertes y difíciles de predecir.
+      </p>
+
+      <div class="arrow-bottom">
+        <img src="svg/arrow.svg" alt="">
+      </div>
+
+      <div class="logo-bottom">
+        <img src="svg/logo.svg" alt="">
+      </div>
+    </main>
+
+    <section class="about-us">
+      <h1 class="first-about-title">¿Qué es un generador de contraseñas?</h1>
+      <p class="first-about-text">Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat
+        ac. Sit
+        risus nulla ut
+        nibh enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed ultrices.
+        Molestie consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
+        Neque pellentesque amet sit risus tellus amet.
+
+
+        Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit aliquam aliquam
+        ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius accumsan enim
+        egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis. Arcu arcu
+        viverra fames bibendum imperdiet mi velit.
+        Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
+      </p>
+      <h1 class="second-about-title">Lo que debe hacer un generador de contraseñas</h1>
+      <p class="second-about-text">Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat
+        ac. Sit
+        risus nulla ut
+        nibh enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed ultrices.
+        Molestie consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
+        Neque pellentesque amet sit risus tellus amet.
+
+
+        Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit aliquam aliquam
+        ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius accumsan enim
+        egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis. Arcu arcu
+        viverra fames bibendum imperdiet mi velit.
+        Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
+        Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat ac. Sit risus nulla ut nibh
+        enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed ultrices. Molestie
+        consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
+        Neque pellentesque amet sit risus tellus amet.
+
+
+        Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit aliquam aliquam
+        ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius accumsan enim
+        egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis. Arcu arcu
+        viverra fames bibendum imperdiet mi velit.
+        Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
+
+        Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat ac. Sit risus nulla ut nibh
+        enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed ultrices. Molestie
+        consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
+        Neque pellentesque amet sit risus tellus amet.
+
+
+        Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit aliquam aliquam
+        ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius accumsan enim
+        egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis. Arcu arcu
+        viverra fames bibendum imperdiet mi velit.
+        Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Est quae ipsam odit nostrum expedita exercitationem fugiat id optio harum deserunt cum unde,
+        voluptas laborum omnis, molestiae commodi sequi, debitis excepturi. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Nobis, quos similique quia, explicabo ut blanditiis nesciunt sit velit esse hic reprehenderit
+        mollitia iusto temporibus maiores? Reiciendis illum doloremque suscipit ducimus.
+      </p>
+    </section>
+
+
+  </div>
+</body>
+
 </html>
