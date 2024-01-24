@@ -15,7 +15,7 @@
   --primary-color: #91A4CD;
   --secondary-color: #F27E31;
   --accent-color: #F26101;
-  --background-color: #7088BD;
+  --background-color: #304269;
   --text-color: #FFF;
 }
 
@@ -32,11 +32,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/desktop/backgroundDesktop.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #304269;
-
+  background:
+    url(../svg/fondo-letras.svg) no-repeat,
+    url(../svg/fondo-vectores.svg) 0px 1080px no-repeat;
+  background-color: var(--background-color);
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -44,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 1366px;
-  height: 100dvh;
+  height: 100vh;
 }
 
 /* CABECERA */
@@ -236,6 +235,7 @@ label {
   padding: 10px;
   justify-content: space-between;
   align-items: center;
+  width: 1000px;
   flex-shrink: 0;
   color: var(--text-color);
   text-align: center;
@@ -261,24 +261,19 @@ label {
 }
 
 .logo-bottom img {
-
   height: 30px;
-
 }
 
 .second-page {
-
   display: flex;
   gap: 3.125rem;
   margin-top: 100px;
   padding: 2rem;
-  height: 100vh;
-  background-image: url(../svg/);
+  width: 100%;
 }
 
 .title-about {
-
-  color: #FFF;
+  color: var(--text-color);
   text-align: center;
   font-family: Inter;
   font-size: 40px;
@@ -288,11 +283,11 @@ label {
 }
 
 .text-about {
-  color: #FFF;
+  color: var(--text-color);
   font-family: Inter;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 3;
+  line-height: 2;
   text-wrap: pretty;
 }
