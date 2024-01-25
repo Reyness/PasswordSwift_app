@@ -28,7 +28,7 @@
   text-decoration: none;
 }
 
-body {
+#home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,7 +308,7 @@ label {
 
 .title-targets {
 
-  width: 100%;
+  width: 80%;
   margin: 150px 0px 100px 0px;
   color: #FFF;
   text-align: center;
@@ -401,7 +401,7 @@ figcaption {
   justify-content: space-around;
   align-items: flex-start;
   flex-shrink: 0;
-  margin: 50px 0px;
+  margin: 150px 0px;
   /* Ajusta según sea necesario */
   gap: 50px;
   /* Ajusta según sea necesario */
@@ -462,8 +462,6 @@ footer {
   justify-content: space-between;
   width: 60%;
 }
-
-.footer-section {}
 
 .footer-section h3 {
   font-size: 1.5rem;
