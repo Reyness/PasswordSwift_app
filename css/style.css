@@ -30,20 +30,23 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
   background:
     url(../svg/fondo-letras.svg) no-repeat,
-    url(../svg/fondo-vectores.svg) 0px 1080px no-repeat;
+    url(../svg/fondo-vectores.svg) 0px 1080px no-repeat,
+    url(../svg/vector-3page.svg) 0px 2160px no-repeat;
   background-color: var(--background-color);
 }
 
-/* CONTENEDOR PRINCIPAL */
 #container {
   display: flex;
   flex-direction: column;
-  width: 1366px;
-  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 /* CABECERA */
@@ -54,7 +57,7 @@ header {
   justify-content: center;
   align-items: flex-end;
   gap: 1rem;
-  width: 1600px;
+  width: 100%;
 }
 
 .btn-login {
@@ -96,7 +99,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1366px;
+  width: 80%;
   gap: 40px;
   padding: 2rem;
   text-align: center;
@@ -269,7 +272,7 @@ label {
   gap: 3.125rem;
   margin-top: 100px;
   padding: 2rem;
-  width: 100%;
+  width: 70%;
 }
 
 .title-about {
@@ -290,4 +293,208 @@ label {
   font-weight: 400;
   line-height: 2;
   text-wrap: pretty;
+}
+
+/* Tarjetas (comentarios) */
+
+.targets {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  /* Para centrar el contenedor */
+}
+
+.title-targets {
+
+  width: 100%;
+  margin: 150px 0px 100px 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-wrap: balance;
+
+}
+
+.target-left,
+.target-mid,
+.target-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6.25rem;
+  width: 32%;
+  /* Ajusta el ancho de cada tarjeta según tus necesidades */
+  box-sizing: border-box;
+  padding: 50px;
+  /* Ajusta el espacio interno según tus necesidades */
+
+  /* Style */
+
+  text-align: center;
+  color: #FFF;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Puedes agregar estilos específicos para cada tarjeta si lo deseas */
+.target-left {
+  border-radius: 30px;
+  background: #2D3953;
+}
+
+.target-mid {
+  border-radius: 30px;
+  background: #2D3953;
+}
+
+.target-right {
+  border-radius: 30px;
+  background: #2D3953;
+}
+
+/* Estilos comunes para las estrellas */
+.stars-left,
+.stars-mid,
+.stars-right {
+
+  align-self: flex-start;
+  /* Posiciona las estrellas a la izquierda */
+}
+
+/* Añade estilos para el figure y su contenido */
+figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .625rem;
+  /* Espacio entre la imagen y el texto */
+}
+
+figcaption {
+  text-align: center;
+  color: #FFF;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Section preguntas */
+
+/* Estilos para la sección de Preguntas Frecuentes */
+.faq-section {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin: 50px 0px;
+  /* Ajusta según sea necesario */
+  gap: 50px;
+  /* Ajusta según sea necesario */
+  width: 80%;
+}
+
+
+.title-faq {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--text-color);
+  text-align: center;
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+  /* Reducido el espacio inferior */
+}
+
+summary {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+details p,
+ul {
+
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2;
+  margin-top: 30px;
+}
+
+/* footer */
+
+/* Footer */
+footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.footer-section {}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  /* Ajusta el tamaño según tus necesidades */
+  height: 30px;
+  /* Ajusta el tamaño según tus necesidades */
 }
