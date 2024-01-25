@@ -36,7 +36,6 @@
   min-height: 100vh;
   background:
     url(../svg/fondo-letras.svg) no-repeat,
-    url(../svg/fondo-vectores.svg) 0px 1080px no-repeat,
     url(../svg/vector-3page.svg) 0px 2160px no-repeat;
   background-color: var(--background-color);
 }
