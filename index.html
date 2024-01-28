@@ -45,6 +45,8 @@
 
   <script src="js/animaciones.js"></script>
 
+  <!-- Nuevo script de JavaScript -->
+  <script src="js/password-generator.js"></script>
 </head>
 
 <body>
@@ -67,18 +69,25 @@
 
           <!-- Entradas para generar contraseñas -->
           <div class="password-generator">
-            <input class="numbers" type="number" value="8">
-            <input class="pass-generate" type="text">
+            <input class="numbers" type="number" value="8" oninput="generatePassword()">
+            <input class="pass-generate" type="text" readonly>
             <button class="copy-button" onclick="copyToClipboard()">Copiar</button>
+            <span class="refresh-icon" onclick="generatePassword()">
+              <!-- Puedes cambiar el contenido del span con tu propio ícono SVG -->
+              <img src="svg/refresh-pass.svg" alt="Icono de recarga">
+            </span>
           </div>
 
           <!-- Validación de caracteres permitidos -->
           <div class="validate-characters">
             <h4 class="text-characters">Caracteres usados:</h4>
-            <input type="checkbox" id="uppercase"><label for="uppercase">A-Z</label>
-            <input type="checkbox" id="lowercase"><label for="lowercase">a-z</label>
-            <input type="checkbox" id="numbers"><label for="numbers">0-9</label>
-            <input type="checkbox" id="symbols"><label for="symbols">!@#$%&</label>
+            <input type="checkbox" id="uppercase" checked onclick="generatePassword()"> <label
+              for="uppercase">A-Z</label>
+            <input type="checkbox" id="lowercase" checked onclick="generatePassword()"> <label
+              for="lowercase">a-z</label>
+            <input type="checkbox" id="numbers" checked onclick="generatePassword()"> <label for="numbers">0-9</label>
+            <input type="checkbox" id="symbols" checked onclick="generatePassword()"> <label
+              for="symbols">!@#$%^&*</label>
           </div>
 
           <p class="content-web">
@@ -286,6 +295,19 @@
       </div>
     </div>
   </footer> -->
+
+
+  <script>
+    // Función para copiar al portapapeles
+    function copyToClipboard() {
+      var copyText = document.querySelector('.pass-generate');
+      copyText.select();
+      document.execCommand('copy');
+    }
+
+    // Llamada a la función de generación de contraseña al cargar la página
+    generatePassword();
+  </script>
 
 </body>
 

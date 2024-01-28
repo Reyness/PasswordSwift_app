@@ -143,6 +143,7 @@ section {
   height: 150px;
 }
 
+/* Estilo para el input de tipo number */
 .numbers {
   font-size: 20px;
   text-align: center;
@@ -150,10 +151,15 @@ section {
   width: 60px;
   height: 60px;
   text-align: center;
-  border-top: 1px solid var(--background-color);
-  border-right: 1px solid var(--background-color);
-  border-bottom: 1px solid var(--background-color);
+  border: 1px solid var(--background-color);
   background: var(--primary-color);
+}
+
+/* Estilo para las flechas en el input de tipo number en Chrome, Safari y Opera */
+.numbers::-webkit-inner-spin-button,
+.numbers::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .pass-generate {
@@ -162,7 +168,7 @@ section {
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   height: 60px;
   border-right: 1px solid var(--background-color);
@@ -184,7 +190,30 @@ section {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
 }
+
+/* Estilo para el ícono de recarga */
+.refresh-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+
+  cursor: pointer;
+}
+
+/* Estilo para el tamaño y color del ícono de recarga */
+.refresh-icon img {
+  height: 20px;
+  /* Ajusta según sea necesario */
+  width: 20px;
+  /* Ajusta según sea necesario */
+  margin-right: 4px;
+  /* Ajusta según sea necesario */
+  fill: var(--text-color);
+  /* Utiliza el color del texto del botón "Copiar" */
+}
+
 
 .validate-characters {
   display: flex;
@@ -511,4 +540,113 @@ footer {
   /* Ajusta el tamaño según tus necesidades */
   height: 30px;
   /* Ajusta el tamaño según tus necesidades */
+}
+
+/* Register css */
+
+#signup-section {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100vh;
+}
+
+
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  display: flex;
+  width: 1384px;
+  height: 905px;
+}
+
+.signup-section .title-web {
+  width: 697px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  border-radius: 0px 40px 40px 0px;
+  background: #435782;
+  padding: 20px;
+}
+
+.signup-section .signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.signup-section input::placeholder {
+  color: var(--text-color);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 300;
+  background: #304269;
+  padding: 10px;
+}
+
+.signup-section input {
+  width: 100%;
+  border: 1px solid var(--background-color);
+  border-radius: 5px;
+  height: 40px;
+}
+
+.signup-section .accept-terms {
+  display: flex;
+  align-items: center;
+}
+
+.signup-section input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--background-color);
+  background: var(--primary-color);
+  box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-right: 10px;
+}
+
+.signup-section input[type="checkbox"]:checked::before {
+  content: "\2713";
+  font-size: 16px;
+  color: var(--text-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.signup-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-section button:hover {
+  background-color: var(--accent-color);
+}
+
+.signup-section .signup-image {
+  width: 687px;
+  height: 905px;
+  object-fit: cover;
+  border-radius: 40px 0px 0px 40px;
 }
