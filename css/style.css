@@ -28,24 +28,12 @@
   text-decoration: none;
 }
 
-#home-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
   justify-content: space-between;
-  min-height: 100vh;
   background:
     url(../svg/fondo-letras.svg) no-repeat,
     url(../svg/vector-3page.svg) 0px 2160px no-repeat;
   background-color: var(--background-color);
-}
-
-#container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
 }
 
 /* CABECERA */
@@ -86,12 +74,29 @@ header {
   background: var(--secondary-color);
 }
 
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+
+}
+
+.snap-center {
+
+  scroll-snap-align: center;
+
+}
+
 /* CONTENIDO PRINCIPAL */
+
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 100vh;
 }
 
 .title-web {
@@ -134,11 +139,14 @@ section {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 80%;
-  height: 100px;
+  width: 90%;
+  height: 150px;
 }
 
 .numbers {
+  font-size: 20px;
+  text-align: center;
+  color: var(--text-color);
   width: 60px;
   height: 60px;
   text-align: center;
@@ -180,7 +188,7 @@ section {
 
 .validate-characters {
   display: flex;
-  width: 800px;
+  width: 70%;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
@@ -269,9 +277,7 @@ label {
 .second-page {
   display: flex;
   gap: 3.125rem;
-  margin-top: 100px;
   padding: 2rem;
-  width: 70%;
 }
 
 .title-about {
@@ -292,6 +298,7 @@ label {
   font-weight: 400;
   line-height: 2;
   text-wrap: pretty;
+  width: 60%;
 }
 
 /* Tarjetas (comentarios) */
@@ -301,14 +308,13 @@ label {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  width: 90%;
-  /* Para centrar el contenedor */
+  width: 80%;
 }
 
 .title-targets {
 
-  width: 80%;
-  margin: 150px 0px 100px 0px;
+  width: 50%;
+  margin: 20px 0px 100px 0px;
   color: #FFF;
   text-align: center;
   font-family: Inter;
@@ -390,21 +396,25 @@ figcaption {
   line-height: normal;
 }
 
+.personal-info {
+
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+
+
+}
+
 /* Section preguntas */
 
 /* Estilos para la sección de Preguntas Frecuentes */
-.faq-section {
+.fourth-page {
   display: flex;
   padding: 40px 20px;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-shrink: 0;
-  margin: 150px 0px;
-  /* Ajusta según sea necesario */
+  justify-content: flex-start;
+  align-items: center;
   gap: 50px;
-  /* Ajusta según sea necesario */
-  width: 80%;
 }
 
 
@@ -430,6 +440,13 @@ summary {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+details {
+
+  display: block;
+  width: 60%;
+
 }
 
 details p,
