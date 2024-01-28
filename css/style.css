@@ -155,13 +155,6 @@ section {
   background: var(--primary-color);
 }
 
-/* Estilo para las flechas en el input de tipo number en Chrome, Safari y Opera */
-.numbers::-webkit-inner-spin-button,
-.numbers::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .pass-generate {
   color: var(--text-color);
   text-align: center;
