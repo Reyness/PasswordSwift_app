@@ -64,3 +64,8 @@ function generateCharset(useUppercase, useLowercase, useNumbers, useSymbols) {
   if (useSymbols) charset += "!@#$%^&*";
   return charset;
 }
+
+window.onload = function () {
+  // Generar la contraseña al cargar la página
+  generatePassword();
+};
