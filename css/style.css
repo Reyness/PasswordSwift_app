@@ -29,11 +29,9 @@
 }
 
 body {
-  justify-content: space-between;
-  background:
-    url(../svg/fondo-letras.svg) no-repeat,
-    url(../svg/vector-3page.svg) 0px 2160px no-repeat;
   background-color: var(--background-color);
+  justify-content: space-between;
+
 }
 
 /* CABECERA */
