@@ -42,24 +42,29 @@
 
   <!-- Scripts a cargar antes de la renderización -->
   <script src="preloader.js"></script>
-
   <script src="js/animaciones.js"></script>
-
-  <!-- Nuevo script de JavaScript -->
   <script src="js/password-generator.js"></script>
 </head>
 
 <body>
 
-  <header>
+<header>
+    <?php session_start(); ?>
     <nav>
-      <a href="register.html" class="sign-up">Sign Up</a>
-      <a href="login.html" class="log-in">Log In</a>
+      <?php
+        // Verificar si el usuario ha iniciado sesión
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+          echo "<a href='dashboard.php' class='welcome-link'><span class='welcome-message'>Bienvenido, " . $_SESSION['firstName'] . "!</span></a>";
+          echo "<a href='logout.php' class='logout-btn'>Cerrar Sesión</a>";
+        } else {
+          echo "<a href='register.php' class='sign-up'>Sign Up</a>";
+          echo "<a href='login.php' class='log-in'>Log In</a>";
+        }
+      ?>
     </nav>
   </header>
 
   <main>
-
     <div class="snap-center">
       <section class="first-page">
         <!-- Título de la página y subtítulo -->
@@ -297,5 +302,4 @@
   </footer> -->
 
 </body>
-
 </html>

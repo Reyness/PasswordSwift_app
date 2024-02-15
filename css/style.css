@@ -72,6 +72,57 @@ header {
   background: var(--secondary-color);
 }
 
+.welcome-link {
+  text-decoration: none;
+  /* Elimina el subrayado del enlace */
+}
+
+.welcome-message {
+  color: var(--accent-color);
+  /* Color del texto */
+  font-family: "Inter", sans-serif;
+  /* Fuente del texto */
+  font-size: 1.2rem;
+  /* Tamaño del texto */
+  font-weight: 600;
+  /* Grosor de la fuente */
+}
+
+/* Estilos para el botón de cerrar sesión */
+.logout-btn {
+  background-color: var(--secondary-color);
+  /* Color de fondo */
+  color: #fff;
+  /* Color del texto */
+  font-family: "Inter", sans-serif;
+  /* Fuente del texto */
+  font-size: 1rem;
+  /* Tamaño del texto */
+  padding: 5px 10px;
+  /* Espaciado interno */
+  /* Borde */
+  border-radius: 5px;
+  /* Radio del borde */
+  text-decoration: none;
+  /* Elimina el subrayado */
+  transition: background-color 0.3s, color 0.3s;
+  /* Transición suave */
+  margin-left: 10px;
+  /* Espacio entre el mensaje de bienvenida y el botón de cerrar sesión */
+
+}
+
+.logout-btn:hover {
+  background-color: var(--primary-color);
+  /* Cambio de color de fondo al pasar el ratón */
+  color: #fff;
+  /* Cambio de color del texto al pasar el ratón */
+}
+
+
+/* Estilos adicionales según tu preferencia */
+
+
 main {
   position: relative;
   width: 100%;
@@ -640,4 +691,33 @@ footer {
   height: 905px;
   object-fit: cover;
   border-radius: 40px 0px 0px 40px;
+}
+
+/* Login */
+
+
+/* Estilo para los campos de entrada */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para el botón de inicio de sesión */
+button.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.login-button:hover {
+  background-color: #0056b3;
 }
