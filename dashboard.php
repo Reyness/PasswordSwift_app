@@ -26,11 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los valores del formulario
     $usuario = $_POST['usuario'];
     $contrasena = $_POST['contrasena'];
+    $pagina_web = $_POST['pagina_web']; // Nuevo campo para la página web
     // Obtener el ID de usuario de la sesión actual
     $usuario_id = $_SESSION['user_id'];
 
     // Consulta SQL para insertar los datos en la tabla "registros"
-    $sql_insert = "INSERT INTO registros (usuario, contrasena, usuario_id) VALUES ('$usuario', '$contrasena', '$usuario_id')";
+    $sql_insert = "INSERT INTO registros (usuario, contrasena, pagina_web, usuario_id) VALUES ('$usuario', '$contrasena', '$pagina_web', '$usuario_id')";
 
     // Ejecutar la consulta
     if ($conn->query($sql_insert) === TRUE) {
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Consulta SQL para seleccionar todos los registros de la tabla "registros" para el usuario actual
-$sql = "SELECT usuario, contrasena FROM registros WHERE usuario_id = " . $_SESSION['user_id'];
+$sql = "SELECT usuario, contrasena, pagina_web FROM registros WHERE usuario_id = " . $_SESSION['user_id'];
 $result = $conn->query($sql);
 ?>
 
@@ -52,147 +53,157 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <style>
-        /* Estilos generales */
+        /* ESTILOS GENERALES */
+        /* Colores */
         :root {
             --primary-color: #91A4CD;
-            --text-color: #FFF;
+            --secondary-color: #F27E31;
+            --accent-color: #F26101;
             --background-color: #304269;
+            --text-color: #FFF;
+            --form-bg-color: #fff;
+            --table-bg-color: #fff;
         }
-
+        /* ROOT */
+        * {
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
         body {
             background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: "Inter", sans-serif;
-            padding: 20px;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
-        h1 {
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1, h2 {
             text-align: center;
-            margin-bottom: 20px;
+            color: var(--primary-color);
         }
-
-        .logo {
-            margin-bottom: 20px;
-        }
-
         form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            background-color: #516A99;
+            background-color: var(--form-bg-color);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         label {
             font-weight: bold;
-            color: var(--text-color);
+            color: black;
         }
-
         input[type="text"],
         input[type="password"],
         input[type="submit"] {
             padding: 10px;
-            border: none;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            width: 300px;
-            max-width: 100%;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
         }
-
         input[type="submit"] {
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: white;
             cursor: pointer;
         }
-
         input[type="submit"]:hover {
-            background-color: #F27E31;
+            background-color: #2980b9;
         }
-
         p.success-message {
-            color: #00FF00;
+            color: #27ae60;
             text-align: center;
             margin-top: 10px;
         }
-
-        a.logout-link {
-            color: #F26101;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        a.logout-link:hover {
-            text-decoration: underline;
-        }
-
         table {
             width: 100%;
+            background-color: var(--table-bg-color);
             border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
-
         th, td {
-            padding: 10px;
+            padding: 15px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
-
         th {
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        a.logout-link {
+            color: #c0392b;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+        a.logout-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="tu_logo.png" alt="Logo">
-    </div>
+    <div class="container">
+        <h1>Bienvenido al dashboard</h1>
+        
+        <h2>Mis cuentas</h2>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <label for="pagina_web">Página Web:</label>
+            <input type="text" id="pagina_web" name="pagina_web" required>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="submit" value="Guardar">
+        </form>
 
-    <h1>Bienvenido al dashboard</h1>
-    
-    <h2>Mis cuentas</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required><br><br>
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
-        <input type="submit" value="Guardar">
-    </form>
-
-    <h2>Registros</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Usuario</th>
-                <th>Contraseña</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Verificar si hay registros
-            if ($result->num_rows > 0) {
-                // Muestra cada registro como una fila en la tabla
-                while($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row["usuario"] . "</td>";
-                    echo "<td>" . $row["contrasena"] . "</td>";
-                    echo "</tr>";
+        <h2>Registros</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Página Web</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row["pagina_web"] . "</td>";
+                        echo "<td>" . $row["usuario"] . "</td>";
+                        echo "<td>" . $row["contrasena"] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='3'>No hay registros</td></tr>";
                 }
-            } else {
-                echo "<tr><td colspan='2'>No hay registros</td></tr>";
-            }
+                ?>
+            </tbody>
+        </table>
 
-            // Cerrar la conexión
-            $conn->close();
-            ?>
-        </tbody>
-    </table>
-
-    <a href="logout.php" class="logout-link">Cerrar sesión</a>
+        <a href="logout.php" class="logout-link">Cerrar sesión</a>
+    </div>
 </body>
 </html>
