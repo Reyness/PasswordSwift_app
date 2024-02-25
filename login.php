@@ -69,11 +69,6 @@ $conn->close();
 
             </div>
         </section>
-
-        <footer>
-            <!-- Footer content, similar to the one you provided -->
-        </footer>
-
     </div>
 </body>
 

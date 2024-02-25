@@ -26,31 +26,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $country = $_POST['country'];
     $mobileNumber = $_POST['mobileNumber'];
 
-    // Consulta SQL para insertar el nuevo usuario en la tabla "users"
-    $sql_insert_user = "INSERT INTO users (firstName, lastName, email, password, country, mobileNumber) VALUES ('$firstName', '$secondName', '$email', '$password', '$country', '$mobileNumber')";
-
-    // Ejecutar la consulta para insertar el nuevo usuario
-    if ($conn->query($sql_insert_user) === TRUE) {
-        // Obtener el ID de usuario recién insertado
-        $usuario_id = $conn->insert_id;
-
-        // Consulta SQL para insertar los datos en la tabla "registros" con el ID de usuario
-        $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contrasena'];
-        $sql_insert_registro = "INSERT INTO registros (usuario, contrasena, usuario_id) VALUES ('$usuario', '$contrasena', '$usuario_id')";
-
-        // Ejecutar la consulta para insertar los datos en la tabla "registros"
-        if ($conn->query($sql_insert_registro) === TRUE) {
-            echo "<p class='success-message'>Los datos se han guardado correctamente.</p>";
-
-            // Redirigir al usuario al index.php después de registrar
-            header("Location: index.php");
-            exit();
-        } else {
-            echo "Error al insertar datos en registros: " . $conn->error;
-        }
+    // Verificar si el correo electrónico ya está en uso
+    $sql_check_email = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($sql_check_email);
+    if ($result->num_rows > 0) {
+        // El correo electrónico ya está en uso, mostrar un mensaje de error
+        echo "El correo electrónico ya está en uso. Por favor, elija otro.";
     } else {
-        echo "Error al insertar usuario: " . $conn->error;
+        // Consulta SQL para insertar el nuevo usuario en la tabla "users"
+        $sql_insert_user = "INSERT INTO users (firstName, lastName, email, password, country, mobileNumber) VALUES ('$firstName', '$secondName', '$email', '$password', '$country', '$mobileNumber')";
+
+        // Ejecutar la consulta para insertar el nuevo usuario
+        if ($conn->query($sql_insert_user) === TRUE) {
+            // Obtener el ID de usuario recién insertado
+            $usuario_id = $conn->insert_id;
+
+            // Consulta SQL para insertar los datos en la tabla "registros" con el ID de usuario
+            $usuario = $_POST['usuario'];
+            $contrasena = $_POST['contrasena'];
+            // Agregar un valor predeterminado para la columna "pagina_web"
+            $pagina_web = ""; // Esto es solo un ejemplo, cambia el valor según lo necesites
+            $sql_insert_registro = "INSERT INTO registros (usuario, contrasena, usuario_id, pagina_web) VALUES ('$usuario', '$contrasena', '$usuario_id', '$pagina_web')";
+
+            // Ejecutar la consulta para insertar los datos en la tabla "registros"
+            if ($conn->query($sql_insert_registro) === TRUE) {
+                echo "<p class='success-message'>Los datos se han guardado correctamente.</p>";
+
+                // Redirigir al usuario al index.php después de registrar
+                header("Location: index.php");
+                exit();
+            } else {
+                echo "Error al insertar datos en registros: " . $conn->error;
+            }
+        } else {
+            echo "Error al insertar usuario: " . $conn->error;
+        }
     }
 }
 

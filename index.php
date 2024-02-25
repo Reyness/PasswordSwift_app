@@ -245,8 +245,6 @@
           <ul>
             <li>Ingresa la longitud deseada de la contraseña.</li>
             <li>Selecciona los tipos de caracteres que deseas incluir.</li>
-            <li>Haz clic en el botón "Generar Contraseña".</li>
-            <li>La nueva contraseña se mostrará en el campo correspondiente.</li>
           </ul>
         </details>
 
@@ -270,36 +268,8 @@
             predecir. Además, se ejecuta localmente en tu dispositivo, proporcionando una capa adicional de privacidad y
             seguridad.</p>
         </details>
-
       </section>
     </div>
-
   </main>
-
-  <!-- <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Contacto</h3>
-        <p>Email: info@example.com</p>
-        <p>Teléfono: +123 456 789</p>
-      </div>
-      <div class="footer-section">
-        <h3>Enlaces útiles</h3>
-        <ul>
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Síguenos</h3>
-        <div class="social-icons">
-          <a href="#" target="_blank"><img src="svg/facebook-icon.svg" alt="Facebook"></a>
-          <a href="#" target="_blank"><img src="svg/twitter-icon.svg" alt="Twitter"></a>
-          <a href="#" target="_blank"><img src="svg/instagram-icon.svg" alt="Instagram"></a>
-        </div>
-      </div>
-    </div>
-  </footer> -->
-
 </body>
 </html>
