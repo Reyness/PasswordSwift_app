@@ -794,7 +794,9 @@ footer {
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  color: white;
   margin: 0 auto;
+  color: white;
 }
 
 .login-section input::placeholder {
@@ -875,4 +877,61 @@ footer {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #92a3ce1f;
+  /* Cambia el color de fondo según tus preferencias */
+  color: #fff;
+  /* Cambia el color del texto según tus preferencias */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
+  padding: 10px 20px;
+  /* Ajusta el relleno según tus preferencias */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Alinea los elementos a la izquierda */
+  width: 100%;
+  /* Opcional: Limita el ancho para controlar el espacio entre los iconos y el texto */
+}
+
+.footer-icons {
+  margin-right: 20px;
+  /* Espacio entre los iconos y el texto */
+}
+
+.footer-icons a {
+  color: #fff;
+  /* Color de los iconos */
+  text-decoration: none;
+  margin-right: 10px;
+  /* Espacio entre los iconos */
+}
+
+.footer-icons a:hover {
+  color: #ccc;
+  /* Cambia el color al pasar el ratón */
+}
+
+.footer-text {
+  text-align: center;
+  /* Alinea el texto al centro */
+  font-size: 14px;
+  /* Tamaño del texto */
+  font-family: "Inter", sans-serif;
+  /* Fuente del texto */
+  font-weight: 300;
+  flex-grow: 1;
+  /* Ocupa todo el espacio disponible */
+  margin-right: 60px;
 }
