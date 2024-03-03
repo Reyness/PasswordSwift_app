@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "edib";
-$password = "edib";
+$servername = "bbdd.antonicolledib.com";
+$username = "ddb220747";
+$password = "ubqR#C4tq8/h5k	";
 $dbname = "PasswordSwift";
 
 // Crear conexión

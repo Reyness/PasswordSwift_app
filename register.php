@@ -2,11 +2,10 @@
 // Iniciar la sesión
 session_start();
 
-// Establecer la conexión con la base de datos
-$servername = "localhost"; // Cambia esto por la dirección del servidor de tu base de datos
-$username = "edib"; // Cambia esto por tu nombre de usuario de la base de datos
-$password = "edib"; // Cambia esto por tu contraseña de la base de datos
-$dbname = "PasswordSwift"; // Cambia esto por el nombre de tu base de datos
+$servername = "bbdd.antonicolledib.com";
+$username = "ddb220747";
+$password = "ubqR#C4tq8/h5k	";
+$dbname = "PasswordSwift";
 
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
