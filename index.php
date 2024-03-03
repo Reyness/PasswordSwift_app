@@ -100,73 +100,37 @@
             <section class="second-page">
                 <!-- Sección sobre el generador de contraseñas -->
                 <h1 class="title-about">¿Qué es un generador de contraseñas?</h1>
-                <p class="text-about">Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis
-                    erat
-                    ac. Sit risus nulla ut nibh enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam
-                    mi in
-                    tempor
-                    sem sed ultrices. Molestie consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh
-                    placerat
-                    aenean libero in.
-                    Neque pellentesque amet sit risus tellus amet.
+                <p class="text-about">Un generador de contraseñas es una herramienta fundamental en el ámbito de la
+                    seguridad informática. Se trata de un software diseñado específicamente para crear contraseñas
+                    únicas y complejas que son utilizadas para proteger el acceso a sistemas, aplicaciones, cuentas en
+                    línea y otros servicios digitales. Estas contraseñas son generadas de manera aleatoria y suelen
+                    incluir una combinación de letras (mayúsculas y minúsculas), números y caracteres especiales. <br>
 
-                    Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit
-                    aliquam
-                    aliquam
-                    ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius
-                    accumsan enim
-                    egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis.
-                    Arcu arcu
-                    viverra fames bibendum imperdiet mi velit.
-                    Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
+                    La importancia de un generador de contraseñas radica en su capacidad para generar contraseñas que
+                    sean altamente seguras y difíciles de adivinar para los hackers. Al generar contraseñas aleatorias y
+                    complejas, se reduce significativamente el riesgo de que sean vulneradas mediante ataques de fuerza
+                    bruta o mediante el uso de diccionarios de contraseñas comunes. Esto contribuye a proteger la
+                    información personal y sensible de los usuarios, así como la integridad y la seguridad de los
+                    sistemas y datos en línea.
                 </p>
 
                 <!-- Sección sobre las características de un buen generador de contraseñas -->
                 <h1 class="title-about">Lo que debe hacer un generador de contraseñas</h1>
-                <p class="text-about">Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis
-                    erat
-                    ac. Sit risus nulla ut nibh enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam
-                    mi in
-                    tempor
-                    sem sed ultrices. Molestie consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh
-                    placerat
-                    aenean libero in.
-                    Neque pellentesque amet sit risus tellus amet.
+                <p class="text-about">
+                    Un generador de contraseñas efectivo debe cumplir con ciertos requisitos y características para
+                    garantizar la seguridad y la robustez de las contraseñas generadas. En primer lugar, debe ser capaz
+                    de generar contraseñas que cumplan con los estándares de seguridad establecidos, incluyendo una
+                    longitud adecuada y la inclusión de una variedad de caracteres (letras, números y símbolos). <br>
 
-                    Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit
-                    aliquam
-                    aliquam
-                    ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius
-                    accumsan enim
-                    egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis.
-                    Arcu arcu
-                    viverra fames bibendum imperdiet mi velit.
-                    Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
-                    Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat ac. Sit risus
-                    nulla ut
-                    nibh
-                    enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed
-                    ultrices. Molestie
-                    consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
-                    Neque pellentesque amet sit risus tellus amet.
+                    Además, el generador de contraseñas debe ofrecer opciones de personalización que permitan al usuario
+                    ajustar la longitud y la complejidad de las contraseñas generadas según sus necesidades y
+                    preferencias específicas. Esto puede incluir la posibilidad de especificar la longitud mínima y
+                    máxima de la contraseña, así como la inclusión opcional de ciertos tipos de caracteres (por ejemplo,
+                    símbolos especiales). <br>
 
-                    Urna quis elementum vitae a interdum tellus. Purus ultricies lacus quisque euismod quis. Blandit
-                    aliquam
-                    aliquam
-                    ac suspendisse enim. Amet fringilla non tempus vitae amet. Velit id id eget volutpat sed. Varius
-                    accumsan enim
-                    egestas duis faucibus consequat. Cursus pretium dolor est dolor sit posuere elit etiam venenatis.
-                    Arcu arcu
-                    viverra fames bibendum imperdiet mi velit.
-                    Ultrices in aliquam habitant et. Euismod ornare non laoreet tincidunt
-
-                    Lorem ipsum dolor sit amet consectetur. Arcu et amet ipsum nullam pulvinar quis erat ac. Sit risus
-                    nulla ut
-                    nibh
-                    enim lacus. Curabitur consequat enim et amet. Sed vitae montes aliquam mi in tempor sem sed
-                    ultrices. Molestie
-                    consequat amet est vel laoreet vestibulum quisque proin scelerisque. Nibh placerat aenean libero in.
-                    Neque pellentesque amet sit risus tellus amet.
+                    Otra característica importante es la capacidad del generador de contraseñas para generar contraseñas
+                    únicas y no repetidas. Esto garantiza que cada contraseña generada sea única y que no haya riesgo de
+                    que se repita una contraseña previamente utilizada o generada por el mismo sistema.
                 </p>
             </section>
         </div>
