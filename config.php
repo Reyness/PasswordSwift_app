@@ -2,7 +2,7 @@
 $servername = "bbdd.antonicolledib.com";
 $username = "ddb220747";
 $password = "ubqR#C4tq8/h5k	";
-$dbname = "PasswordSwift";
+$dbname = "ddb220747";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
